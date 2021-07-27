@@ -12,8 +12,12 @@
   </head>
 
   <body>
+<%= render "partials/header" %>
+<%= render "partials/errors" %>
+
      <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+<%= render "partials/footer" %>
   </body>
 </html>
