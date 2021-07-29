@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  resources :articles
+  get 'category/show'
+  resources :articles do
+    resources :votes, only: [:create]
+  end
+  resources :articles, only: [:create, :show, :new]
+  resources :category, only: [:show]
+
   devise_for :users
+
   root 'articles#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
