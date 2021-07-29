@@ -37,16 +37,13 @@ RSpec.describe Article, type: :model do
     end
 
     it 'has not proper size' do
-      article.body = "sod" * 999
+      article.body = 'sod' * 999
       expect(article).not_to be_valid
     end
 
     it 'has proper size' do
-      article.body = "sod" * 99
+      article.body = 'sod' * 99
       expect(article).to be_valid
     end
-
   end
-
-  
 end

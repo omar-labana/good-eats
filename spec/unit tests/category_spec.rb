@@ -12,7 +12,5 @@ RSpec.describe Category, type: :model do
       category.name = nil
       expect(category).not_to be_valid
     end
-
-    
   end
 end
