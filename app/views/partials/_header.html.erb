@@ -8,9 +8,11 @@
 
     <div class="font-semibold">
         <%= link_to 'Home', articles_path, class: "mx-2 p-2 hover:bg-yellow-700" %>
-        <%= link_to 'Spicy Food', new_article_path, class: "mx-2 p-2 hover:bg-yellow-700" %>      
-        <%= link_to 'Normal Food', new_article_path, class: "mx-2 p-2 hover:bg-yellow-700" %>      
-        <%= link_to 'Soup', new_article_path, class: "mx-2 p-2 hover:bg-yellow-700" %>      
+        <a href="/category/1" class= "mx-2 p-2 hover:bg-yellow-700">Mild</a>
+        <a href="/category/2" class= "mx-2 p-2 hover:bg-yellow-700">Spicy</a>
+        <a href="/category/3" class= "mx-2 p-2 hover:bg-yellow-700">Soup</a>
+        <a href="/category/4" class= "mx-2 p-2 hover:bg-yellow-700">Appetizers</a>
+             
         <%= link_to 'Add Article', new_article_path, class: "mx-2 p-2 hover:bg-yellow-700" %>      
     </div>
 
