@@ -1,0 +1,30 @@
+<div class= "w-full max-w-xs m-auto text-center mt-5">
+  <h1 class="text-gray-600 text-4xl ">Please, Sign In</h1>
+</div>
+ 
+<div class="w-full max-w-2xl m-auto p-6">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'flex flex-col'}) do |f| %>
+    <div class="mt-2">
+      <%= f.label :login, class: 'mt-3 text-lg' %>
+      <%= f.text_field :login, autofocus: true, autocomplete: "Username", class: 'border-2 rounded-md w-full p-4 text-lg', placeholder: 'Username' %>
+    </div>
+
+    <div class="mt-2">
+      <%= f.label :password, class: 'mt-3 text-lg' %>
+      <%= f.password_field :password, autocomplete: "current-password", class: 'border-2 rounded-md w-full p-4 text-lg', placeholder: "Password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="flex items-center mt-3">
+        <%= f.check_box :remember_me ,class: "mr-2 p-2"%>
+        <%= f.label :remember_me ,class: "text-xl"%>
+      </div>
+    <% end %>
+
+    <div class="flex items-center justify-between mt-4 text-lg">
+      <%= f.submit "Log In", class: 'text-lg bg-black text-white p-4' %>
+      <%= link_to "Forgot Password?",  new_user_password_path, class: "text-lg" %>
+    </div>
+  <% end %>
+</div>
+
