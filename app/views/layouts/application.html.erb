@@ -14,11 +14,13 @@
 
   <body>
     <%= render "partials/header" %>
-    <%= render "partials/errors" %>
+    
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <main class="lamo">
     <%= yield %>
+    </main>
 
   
     <%= render "partials/footer" %>
