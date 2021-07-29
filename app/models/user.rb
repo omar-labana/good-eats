@@ -8,7 +8,7 @@ class User < ApplicationRecord
   # Associations
   has_many :articles
   has_many :votes
-  
+
   attr_writer :login
 
   def login

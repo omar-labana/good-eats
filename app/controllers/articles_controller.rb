@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
   before_action :load_categories, only: %i[edit update new create]
-  # TODO => Indexing not working
+  # TODO: => Indexing not working
   include ActionView::Helpers::TextHelper
 
   def index
@@ -39,7 +39,6 @@ class ArticlesController < ApplicationController
   def set_article
     @article = Article.find(params[:id])
   end
-
 
   def article_params
     params.require(:article).permit!
