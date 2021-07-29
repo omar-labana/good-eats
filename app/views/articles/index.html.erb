@@ -1,0 +1,32 @@
+<div class='w-full relative'>
+<% @top_article.each do |article| %>
+      <%= link_to article do %>
+        <%= image_tag article.image.to_s, alt: 'image', class: 'object-cover w-full h-96 dark' %>
+        <div class='absolute bottom-0 text-2xl w-full px-16'>
+           <%= link_to article do %>
+          <h2 class="m-4 text-white font-semibold text-yellow-500"><%= article.title %></h2>
+        <% end %>
+        <%= link_to article do %>
+          <div class="m-4 text-white text-lg"><%= truncate article.body, length: 60, omission: '...(click for more)' %></div>
+         <% end %>
+        </div>
+      <% end %>
+    <% end %>
+</div>
+
+<div class="grid grid-cols-4 h-72 relative">
+    <% @categories.each do |c| %>
+      <div class='font-bold object-cover relative h-72 acid' style="background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(<%= c.articles.last.image %>);  ";>
+        <%= link_to category_path(c.id) do %>
+          <h2 class="text-white ml-3 text-lg sado inline pb-1 pt-5" >
+            <%= c.name %>
+          </h2>
+        <% end %>
+        <%= link_to article_path(c.articles.ids.last), class: 'm-3 ml-2 text-base text-white absolute inset-x-0 bottom-0 no-underline' do %>
+          
+            <%= truncate c.articles.last.title, length: 30, omission: '...(click for article)' %>
+        
+        <% end %>
+      </div>
+    <% end %>
+</div>
