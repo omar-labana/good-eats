@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2021_07_26_104953) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
+    t.string "image"
     t.text "body"
-    t.text "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "category_id", null: false
