@@ -62,7 +62,7 @@ rails db:migrate
 rails db:seed
 ```
 
-You will have some written articles and votes.
+When cloning the project please seed the database so you can have some written articles and votes.
 
 - To start your local host, run
 
