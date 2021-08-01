@@ -18,7 +18,7 @@
 
 ## Live Demo
 
-[Live Demo Link](dum)
+[Live Demo Link](https://powerful-lake-39450.herokuapp.com/)
 
 ## Getting Started
 
@@ -57,12 +57,19 @@ bundle install
 - To start using the project run
 
 ```sh
+yarn
 rails db:create
 rails db:migrate
 rails db:seed
 ```
+In orderto compile Tailwind CSS assets after you install it with yarn follow [this](https://www.youtube.com/watch?v=Q1aTo2I6Dxc&t=700s&ab_channel=Web-Crunch) guide or on a different terminal run 
 
-When cloning the project please seed the database so you can have some written articles and votes.
+```sh
+bin/webpack-dev-server
+```
+
+
+When cloning the project please seed the database so you can have some written articles and votes. Categories wont be present unless you have seeded the database.
 
 - To start your local host, run
 
@@ -83,3 +90,29 @@ rspec
 
 Note: you need chrome for UI testing
 
+## Author:
+
+👤 **Omar Labana**
+
+- GitHub: [@omar-labana](https://github.com/omar-labana)
+- Twitter: [@panda4cs](https://twitter.com/Panda4cs)
+- LinkedIn: [Omar Labana](https://www.linkedin.com/in/omarlabana/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/)
+- [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+
+
+## 📝 License
+
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
