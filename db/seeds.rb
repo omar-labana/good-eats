@@ -5,7 +5,7 @@ DatabaseCleaner.strategy = :truncation
 # then, whenever you need to clean the DB
 DatabaseCleaner.clean
 
-omar = User.create username: 'Omar', email: 'omar@ramo.com', password: '123456', password_confirmation: '123456'
+omar = User.create username: 'omar', email: 'omar@ramo.com', password: '123456', password_confirmation: '123456'
 
 ramo = User.create username: 'ramo', email: 'ramo@omar.com', password: '123456', password_confirmation: '123456'
 
