@@ -62,11 +62,7 @@ rails db:create
 rails db:migrate
 rails db:seed
 ```
-In orderto compile Tailwind CSS assets after you install it with yarn follow [this](https://www.youtube.com/watch?v=Q1aTo2I6Dxc&t=700s&ab_channel=Web-Crunch) guide or on a different terminal run 
-
-```sh
-bin/webpack-dev-server
-```
+If webpack faild to compile Tailwind CSS assets after you install it with yarn follow [this](https://www.youtube.com/watch?v=Q1aTo2I6Dxc&t=700s&ab_channel=Web-Crunch) guide.
 
 
 When cloning the project please seed the database so you can have some written articles and votes. Categories wont be present unless you have seeded the database.
